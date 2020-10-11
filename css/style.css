@@ -23,8 +23,8 @@ ul{
 }
 
 .container{
-  width: 1230px;
-  padding: 0 15px;
+  width: 1220px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -38,6 +38,10 @@ ul{
   font-size: 36px;
   line-height: 42px;
   font-weight: 400;
+}
+
+.title__seasons{
+  margin-bottom: 150px;
 }
 
 .header{
@@ -89,7 +93,7 @@ ul{
 }
 
 .logo{
-  padding-top: 178px;
+  padding-top: 17vh;
 }
 
 .about__inner{
@@ -113,7 +117,7 @@ ul{
 }
 
 .about__text{
-  width: 775px;
+  width: 63%;
 }
 
 .about__text p{
@@ -135,7 +139,7 @@ ul{
   font-weight: 300;
   font-size: 72px;
   line-height: 84px;
-  padding-top: 244px;
+  padding-top: 45vh;
   margin-bottom: 40px;
 }
 
@@ -162,13 +166,12 @@ ul{
 
 .seasons__inner{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   grid-gap: 100px 75px;
   counter-reset: number;
 }
 
 .seasons__item{
-  width: 350px;
   height: 250px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -178,6 +181,8 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .seasons__item:hover::after{
@@ -205,6 +210,10 @@ ul{
   left: 0;
   top: -70px;
   z-index: -1;
+}
+
+.seasons__item:nth-child(n+10)::before{
+  content: counter(number);
 }
 
 .seasons__link{
@@ -321,7 +330,81 @@ ul{
 }
 
 
-
 /* end page season-1 */
+
+
+/* start media */
+
+
+@media(max-width: 1366px){
+  .container{
+    width: 85%;
+  }
+  .logo__img{
+    width: 50%;
+  }
+  .menu__list-link{
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .about__info{
+    width: 250px;
+  }
+  .title {
+    margin-bottom: 50px;
+  }
+  .section-page  {
+    padding: 50px 0;
+  }
+  .title__seasons {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 768px){
+  .about__inner{
+    display: block;
+  }
+  .about__text{
+    width: 100%;
+  }
+  body{
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .video__text{
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .video__text span{
+    padding-right: 200px;
+  }
+  .video__btn{
+    margin-right: 0;
+    padding-left: 62px;
+  }
+  .video__btn::before{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    top: -16px;
+  }
+}
+
+@media (max-width: 640px){
+  .menu__list{
+    display: none;
+  }
+  .logo{
+    padding-top: 21vh;
+  }
+  .video__text span {
+    padding-right: 180px;
+  }
+}
+
+
+
+/* end media */
 
 
